@@ -111,4 +111,28 @@ EOT
     is_custom_landing_page true
   end
 
+  factory :digital_collections_list, class: DigitalCollection do
+
+    example_items = [
+      { collection_alias: 'p15037coll1',   name: 'Temple Sheet Music Collections' },
+      { collection_alias: 'p15037coll2',   name: 'SCRC Film and Video' },
+      { collection_alias: 'p15037coll7',   name: 'George D. McDowell Philadelphia Evening Bulletin Clippings' },
+      { collection_alias: 'p15037coll12',  name: 'Temple Undergraduate Research Prize Winners' },
+      { collection_alias: 'p15037coll14',  name: 'SCRC Books and Pamphlets' },
+      { collection_alias: 'p16002coll1',   name: 'SCRC Audio' },
+      { collection_alias: 'p16002coll7',   name: 'Blockson Ephemera' },
+      { collection_alias: 'p16002coll8',   name: 'Temple University Press E-Books' },
+      { collection_alias: 'p16002coll9',   name: 'Allied Posters of World War I' },
+      { collection_alias: 'p16002coll14',  name: 'Franklin H. Littell Papers' },
+      { collection_alias: 'p245801coll12', name: 'Temple University Yearbooks' }
+    ]
+
+    sequence :collection_alias do |n|
+      example_items[n-1][:collection_alias]
+    end
+    sequence :name do |n|
+      example_items[n-1][:name]
+    end
+  end
+
 end

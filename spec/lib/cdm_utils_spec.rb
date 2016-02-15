@@ -11,11 +11,12 @@ describe 'List CONTENTdm collections' do
   let (:schema_url) { "http://www.fedora.info/definitions/1/0/foxml1-1.xsd" }
   let (:download_directory) { config['cdm_download_dir'] }
   let (:converted_directory) { config['cdm_foxml_dir'] }
-  let (:number_of_collections) { 33 }
-  let (:download_file_count) { 33 }
+  let (:number_of_collections) { 11 }
+  let (:download_file_count) { 11 }
 
   describe 'list' do
     it "should list ContentDM collections" do
+      1.upto 11 do FactoryGirl.create(:digital_collections_list) end
       collections = CDMUtils.list(config['cdm_server'])
       expect(collections.length).to be >= number_of_collections
     end
