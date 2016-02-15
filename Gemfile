@@ -68,7 +68,7 @@ group :test do
   gem "factory_girl_rails", "~> 4.0"
   gem "database_cleaner"
   gem 'simplecov', :require => false
-  gem 'simplecov-csv'
+  #gem 'simplecov-csv', :require => false
 end
 
 group :development, :test do

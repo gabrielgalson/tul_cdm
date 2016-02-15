@@ -5,7 +5,7 @@ require 'simplecov-csv'
 SimpleCov.start 'rails'
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
-  SimpleCov::Formatter::CSVFormatter,
+  # SimpleCov::Formatter::CSVFormatter,
 ]
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
