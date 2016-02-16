@@ -14,9 +14,17 @@ describe 'List CONTENTdm collections' do
   let (:number_of_collections) { 11 }
   let (:download_file_count) { 11 }
 
+  before :all do
+    DigitalCollection.delete_all if DigitalCollection.count
+    1.upto 11 do FactoryGirl.create(:digital_collections_list) end
+  end
+
+  after :all do
+    DigitalCollection.delete_all
+  end
+
   describe 'list' do
     it "should list ContentDM collections" do
-      1.upto 11 do FactoryGirl.create(:digital_collections_list) end
       collections = CDMUtils.list(config['cdm_server'])
       expect(collections.length).to be >= number_of_collections
     end
@@ -47,6 +55,7 @@ describe 'List CONTENTdm collections' do
     end
 
     it "should not download a private collection" do
+      FactoryGirl.create(:private_digital_collection)
       VCR.use_cassette "cdm-util-download/should_not_harvest_a_private_ContentDM_file" do
         @downloaded = CDMUtils.download_one_collection(config, private_collection_name)
       end
@@ -55,7 +64,7 @@ describe 'List CONTENTdm collections' do
       expect(file_count).to eq(0)
     end
 
-    context "OCR Text" do
+    xcontext "OCR Text" do
 
       let (:ocr_text_tag) { "Document_Content" }
       let (:ocr_text_xpath) { "//Document_Content" }

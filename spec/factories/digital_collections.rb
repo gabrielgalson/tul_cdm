@@ -40,10 +40,10 @@ EOT
   end
 
   factory :private_digital_collection, class: DigitalCollection do
-    collection_alias "p16002coll14"
-    name "Franklin H. Littell Papers"
-    image_url "http://digital.library.temple.edu/ui/custom/default/collection/coll_p16002coll14/images/Littell_Landing_Pagev3.jpg"
-    thumbnail_url "http://digital.library.temple.edu/ui/custom/default/collection/default/resources/custompages/home/littell_dtl.jpg"
+    collection_alias "p16002coll11"
+    name "Private Digital Collection"
+    image_url "http://digital.library.temple.edu/ui/custom/default/collection/coll_p16002coll11/images/private.jpg"
+    thumbnail_url "http://digital.library.temple.edu/ui/custom/default/collection/default/resources/custompages/home/private.jpg"
     description ""
     short_description ""
     is_private true
@@ -51,10 +51,10 @@ EOT
   end
 
   factory :private_digital_collection_allowed, class: DigitalCollection do
-    collection_alias "p16002coll14"
-    name "Franklin H. Littell Papers"
-    image_url "http://digital.library.temple.edu/ui/custom/default/collection/coll_p16002coll14/images/Littell_Landing_Pagev3.jpg"
-    thumbnail_url "http://digital.library.temple.edu/ui/custom/default/collection/default/resources/custompages/home/littell_dtl.jpg"
+    collection_alias "p16002coll11"
+    name "Allowed Private Digital Collection"
+    image_url "http://digital.library.temple.edu/ui/custom/default/collection/coll_p16002coll11/images/private.jpg"
+    thumbnail_url "http://digital.library.temple.edu/ui/custom/default/collection/default/resources/custompages/home/private.jpg"
     description ""
     short_description ""
     is_private true
@@ -62,10 +62,10 @@ EOT
   end
 
   factory :private_digital_collection_denied, class: DigitalCollection do
-    collection_alias "p16002coll14"
-    name "Franklin H. Littell Papers"
-    image_url "http://digital.library.temple.edu/ui/custom/default/collection/coll_p16002coll14/images/Littell_Landing_Pagev3.jpg"
-    thumbnail_url "http://digital.library.temple.edu/ui/custom/default/collection/default/resources/custompages/home/littell_dtl.jpg"
+    collection_alias "p16002coll11"
+    name "Denied Private Digital Collection"
+    image_url "http://digital.library.temple.edu/ui/custom/default/collection/coll_p16002coll11/images/private.jpg"
+    thumbnail_url "http://digital.library.temple.edu/ui/custom/default/collection/default/resources/custompages/home/private.jpg"
     description ""
     short_description ""
     is_private true

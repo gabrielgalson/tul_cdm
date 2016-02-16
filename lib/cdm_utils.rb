@@ -13,7 +13,7 @@ module CDMUtils
     xml = Nokogiri::XML(open(cdm_url))
     all_aliases = xml.xpath("/collections/collection/alias/text()").map { |c| c.to_s[1..-1] }
     digital_collections = available_collections
-    
+
     collections = Hash.new
     xml.xpath("/collections/collection").each do |c|
       collection_alias = c.xpath("alias/text()").to_s[1..-1]
